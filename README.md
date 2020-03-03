@@ -1,7 +1,6 @@
-# Dell Vostro 3568 EFI For MacOS
-- Support MacOS Catalina 10.15.1
-- Copy and paste EFI to use
-- Not fix wifi and Card AMD R5 M420
+# Dell Vostro 3568 EFI For MacOS Catalina
+- Copy and paste Clover in EFI to using.
+- Not fix wifi and Card AMD R5 M420.
 
 | Model     | Name    |
 | --------- | -------- | 
