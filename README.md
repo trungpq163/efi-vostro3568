@@ -1,6 +1,7 @@
 # Dell Vostro 3568 EFI For MacOS Catalina
 - Copy and paste Clover in EFI to using.
 - Not fix wifi and Card AMD R5 M420.
+- To fix microphone let install JackFix and add it to startup program.
 
 | Model     | Name    |
 | --------- | -------- | 
