@@ -240,11 +240,11 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -disablegfxfirmware -v debug=0x100</string>
+		<string>dart=0 nv_disable=1 -disablegfxfirmware debug=0x100 -v</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
-		<true/>
+		<false/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
@@ -265,6 +265,67 @@
 			<string>0x59168086</string>
 			<key>#Kaby Lake-Comment</key>
 			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
+		</dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AAAWWQ==
+				</data>
+				<key>AAPL,slot-name</key>
+				<string>Build-in</string>
+				<key>device-id</key>
+				<data>
+				FlkAAA==
+				</data>
+				<key>device_type</key>
+				<string>Display Controller</string>
+				<key>framebuffer-fbmem</key>
+				<data>
+				AACQAA==
+				</data>
+				<key>framebuffer-memorycount</key>
+				<data>
+				AwAAAA==
+				</data>
+				<key>framebuffer-mobile</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-patch-enable</key>
+				<integer>1</integer>
+				<key>framebuffer-pipecount</key>
+				<data>
+				AwAAAA==
+				</data>
+				<key>framebuffer-portcount</key>
+				<data>
+				AwAAAA==
+				</data>
+				<key>framebuffer-stolenmem</key>
+				<data>
+				AAAwAQ==
+				</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAwA==
+				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>model</key>
+				<string>NVIDIA GeForce GTX 2080 SUPER</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Build-in</string>
+				<key>layout-id</key>
+				<integer>11</integer>
+				<key>model</key>
+				<string>Realtek ALC256 Audio Controller</string>
+			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -317,7 +378,10 @@
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
+			<string>Recovery</string>
 		</array>
+		<key>Language</key>
+		<string>en:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>Enabled</key>
@@ -334,6 +398,8 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
+		<key>ScreenResolution</key>
+		<string>1920x1080</string>
 		<key>Theme</key>
 		<string>BGM</string>
 	</dict>
@@ -351,7 +417,7 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
 			<false/>
 		</dict>
@@ -461,20 +527,20 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Change VRAM 1536 -&gt; 2048 for 0x591b0000</string>
+				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
-				AAAAYIkd5ogIAESJHeOICA==
+				RiV1VCUwNHgA
 				</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelKBLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleBacklight</string>
 				<key>Replace</key>
 				<data>
-				AAAAgIkd5ogIAESJHeOICA==
+				RiV1VHh4eHgA
 				</data>
 			</dict>
 		</array>
@@ -485,9 +551,17 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string>C02623201W1GDW619</string>
+		<key>ROM</key>
+		<data>
+		CG1Bd2ze
+		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>Mobile</key>
+		<true/>
 		<key>Trust</key>
 		<true/>
 	</dict>
